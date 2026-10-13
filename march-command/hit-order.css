@@ -1,0 +1,21 @@
+/* Hit order add-on — styled to match the Launch schedule table */
+.hitorder{--ho-cols:28px 34px minmax(0,1fr) 120px 120px 76px}
+.ho-head,.ho-player{display:grid;grid-template-columns:var(--ho-cols);align-items:center;column-gap:10px}
+.ho-head{padding:12px 10px;border-bottom:1px solid #476072;color:var(--muted);font-size:12px;font-weight:500;white-space:nowrap}
+.ho-head span:last-child{text-align:right}
+#ho-list{list-style:none;margin:0;padding:0;font-size:14px}
+.ho-group{display:flex;align-items:baseline;gap:10px;padding:16px 10px 8px;border-bottom:1px solid var(--line)}
+.ho-group small{color:var(--muted);font-size:12px}
+.ho-player{padding:17px 10px;border-bottom:1px solid var(--line);background:#111c27;font-variant-numeric:tabular-nums}
+.ho-handle{cursor:grab;touch-action:none;user-select:none;color:#5d7b90;font-size:18px;line-height:1;padding:4px 0}
+.ho-handle:hover{color:var(--accent)}
+.ho-pos{color:var(--muted)}
+.ho-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ho-name small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+.ho-hit{color:var(--accent);font-weight:700}
+.ho-btns{display:flex;gap:5px;justify-content:flex-end}
+.ho-btns button{padding:5px 8px}
+.ho-dragging{background:#172632;outline:1px solid var(--accent);outline-offset:-1px;border-radius:5px;cursor:grabbing}
+.ho-dragging .ho-handle{cursor:grabbing}
+.ho-empty{color:var(--muted);padding:17px 10px}
+@media(max-width:760px){.hitorder{--ho-cols:24px 24px minmax(0,1fr) 84px 76px}.ho-head span:nth-child(4),.ho-call{display:none}}
